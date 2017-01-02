@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Numcode</string>
+    <string name="numcode_button">NUMCODE WEB</string>
+    <string name="numcode_profile">MY NUMCODE</string>
+    <string name="numcode_share">SHARE MY NUMCODE</string>
+    <string name="ok">OK</string>
+    <string name="register">Registrarme</string>
 </resources>
