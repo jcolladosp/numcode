@@ -1,12 +1,20 @@
 <resources>
     <string name="app_name">Numcode</string>
     <string name="numcode_button">NUMCODE WEB</string>
-    <string name="numcode_profile">MI NUMCODE</string>
-    <string name="numcode_share">COMPARTIR MI NUMCODE</string>
-    <string name="share_using">Compartir en: </string>
+    <string name="numcode_profile">MY NUMCODE</string>
+    <string name="numcode_profile_lowercase">My Numcode</string>
+    <string name="numcode_share">SHARE MY NUMCODE</string>
+    <string name="share_using">Share with: </string>
     <string name="ok">OK</string>
-    <string name="register">Registrarme</string>
-    <string name="save_numcode">Guarda tu Numcode</string>
-    <string name="numcode_alert_body">Para continuar es necesario introducir tu Numcode o registrarte para obtener uno.</string>
-    <string name="share_body">Hola! Ahora puedes ver todos mis datos personales siempre actualizados en Numcode. Solo tienes que clickar aquí: </string>
+    <string name="register">Sign up</string>
+    <string name="save_numcode">Save your Numcode</string>
+    <string name="numcode_alert_body">You need to introduce your Numcode or sign up and get one.</string>
+    <string name="share_body">Hi! Now you can see all my personal data always updated. You only have to click here: </string>
+
+    <string name="settings">Settings</string>
+    <string name="spanish">Spanish</string>
+    <string name="english">English</string>
+    <string name="french">French</string>
+    <string name="language">Language</string>
+    <string name="save">Save</string>
 </resources>

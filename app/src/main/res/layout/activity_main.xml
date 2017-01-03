@@ -119,6 +119,17 @@
              android:layout_marginLeft="110dp" />
      </RelativeLayout>
 
+     <ImageView
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         fancy:srcCompat="@drawable/ic_settings"
+         android:layout_alignParentBottom="true"
+         android:layout_alignParentRight="true"
+         android:layout_alignParentEnd="true"
+         android:id="@+id/settingsButton"
+         android:layout_marginRight="5dp"
+         android:layout_marginBottom="5dp" />
+
  </RelativeLayout>
 
  </LinearLayout>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:focusableInTouchMode="true"
+
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/language"
+        android:textColor="#80000000"
+        android:textSize="18sp" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="15dp"
+        android:id="@+id/languageRG">
+
+        <RadioButton
+            android:text="@string/spanish"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/spanishRB"
+            android:layout_weight="1" />
+
+        <RadioButton
+            android:text="@string/french"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/frenchRB"
+            android:layout_weight="1" />
+
+        <RadioButton
+            android:text="@string/english"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/englishRB"
+            android:layout_weight="1" />
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/numcode_profile_lowercase"
+        android:textColor="#80000000"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/numcodeED"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:textColor="#000000"
+
+        android:inputType="number" />
+
+</LinearLayout>
