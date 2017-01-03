@@ -30,7 +30,5 @@ dependencies {
     compile 'com.github.medyo:fancybuttons:1.8.3'
     compile 'com.afollestad.material-dialogs:core:0.9.1.0'
     compile 'com.thefinestartist:finestwebview:1.2.7'
-    compile 'com.squareup.okhttp3:okhttp:3.5.0'
-    compile 'com.takisoft.fix:preference-v7:25.0.1.0'
     testCompile 'junit:junit:4.12'
 }
