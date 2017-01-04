@@ -5,7 +5,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.content.res.Resources;
-import android.graphics.Color;
+
 import android.support.annotation.NonNull;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
@@ -13,7 +13,7 @@ import android.os.Bundle;
 
 import android.text.InputType;
 import android.util.DisplayMetrics;
-import android.util.Log;
+
 import android.view.View;
 import android.widget.EditText;
 import android.widget.RadioButton;
@@ -23,8 +23,6 @@ import com.afollestad.materialdialogs.DialogAction;
 import com.afollestad.materialdialogs.MaterialDialog;
 import com.thefinestartist.finestwebview.FinestWebView;
 
-import java.io.IOException;
-import java.util.ArrayList;
 import java.util.Locale;
 
 import butterknife.BindView;
@@ -32,15 +30,12 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 import jcollado.pw.numcode.Utils.Functions;
 import mehdi.sakout.fancybuttons.FancyButton;
-import okhttp3.Callback;
-import okhttp3.OkHttpClient;
-import okhttp3.Request;
-import okhttp3.Response;
+
 
 
 public class MainActivity extends AppCompatActivity {
     SharedPreferences sharedPref;
-    OkHttpClient client;
+   
     String url = "http://www.numcode.com/nouveau/";
     @BindView(R.id.buttonShare)
     FancyButton buttonShare;
@@ -55,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        client = new OkHttpClient();
+
         ButterKnife.bind(this);
          sharedPref =getPreferences(Context.MODE_PRIVATE);
         buttonShare.setCustomTextFont("WorkSans-Medium.otf");

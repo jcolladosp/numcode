@@ -10,7 +10,6 @@
     <string name="save_numcode">Garder mon Numcode</string>
     <string name="numcode_alert_body">Pour continuer il faut introduire un numcode ou en s enregistrer pour en obternir un</string>
     <string name="share_body">Bonjour, pour voir toutes mes coordonnées actualisées avec numcode. Clique ICI: </string>
-    <string name="not_exists">ce numcode n\'existe pas, enregistrer le!</string>
     <string name="settings">Fonctions</string>
     <string name="spanish">Español</string>
     <string name="english">Ingles</string>
