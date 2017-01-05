@@ -3,10 +3,11 @@ Numcode
 **Numcode** is an app for things. Short description here.
 
 #### Screenshot
-<img src="http://i.imgur.com/cgB1PNW.png" height="24" width="48">
-![Screenshot Android](http://i.imgur.com/cgB1PNW.png =100x20)
-![Screenshot Android](http://i.imgur.com/agoddub.png =100x20)
-![Screenshot Android](http://i.imgur.com/4bm8ZOD.png =100x20)
+<img src="http://i.imgur.com/cgB1PNW.png" height="270" width="480">
+<img src="http://i.imgur.com/agoddub.png" height="270" width="480">
+<img src="http://i.imgur.com/4bm8ZOD.png" height="270" width="480">
+
+![Screenshot Android]( =100x20)
 
 
 #### App Stores
