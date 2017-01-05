@@ -1,6 +1,6 @@
 Numcode
 ======
-**Numcode** is an app for things. Short description here.
+**Numcode** is an app that brings Numecode website to your phone. It also add the feature of sharing your Numcode through messaging apps
 
 #### Screenshot
 <img src="http://i.imgur.com/cgB1PNW.png" height="480" width="270">
@@ -12,12 +12,12 @@ Numcode
 
 #### App Stores
 <!-- edit this image location -->
-[![Get it on Google Play](https://raw.github.com/repat/README-template/master/googleplay.png)](https://play.google.com/store/apps/details?id=com.package.path)
+[![Get it on Google Play](https://raw.github.com/repat/README-template/master/googleplay.png)](https://play.google.com/store/apps/details?id=jcollado.pw.numcode)
 
 
 
 #### QR Market Links
-![QR-Code Android](http://url/qrcode-appname-android.png)
+![QR-Code Android](https://chart.googleapis.com/chart?cht=qr&chl=https%3A%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails%3Fid%3Djcollado.pw.numcode&chs=180x180&choe=UTF-8&chld=L|2)
 
 
 
