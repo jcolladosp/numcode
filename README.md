@@ -3,9 +3,9 @@ Numcode
 **Numcode** is an app for things. Short description here.
 
 #### Screenshot
-<img src="http://i.imgur.com/cgB1PNW.png" height="270" width="480">
-<img src="http://i.imgur.com/agoddub.png" height="270" width="480">
-<img src="http://i.imgur.com/4bm8ZOD.png" height="270" width="480">
+<img src="http://i.imgur.com/cgB1PNW.png" height="480" width="270">
+<img src="http://i.imgur.com/agoddub.png" height="480" width="270">
+<img src="http://i.imgur.com/4bm8ZOD.png" height="480" width="270">
 
 ![Screenshot Android]( =100x20)
 
