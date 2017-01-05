@@ -21,12 +21,13 @@ Numcode
 ### Design
 * [qadrcreative](https://www.fiverr.com/qadrcreative)
  
-
 ### Third party libraries
 * [Butter Knife](https://github.com/JakeWharton/butterknife)
 * [Fancybuttons](https://github.com/medyo/Fancybuttons)
 * [Material Dialogs](https://github.com/afollestad/material-dialogs)
 * [FinestWebView](https://github.com/TheFinestArtist/FinestWebView-Android)
+
+
 ## Permissions
 * Internet
 
@@ -36,11 +37,13 @@ Numcode
 ## Version 
 * Version 1.1
 
-
-
 ## Contact
 #### Developer
 * Homepage: http://jcollado.pw/
 * e-mail: jocolsan@inf.upv.es
 * Twitter: [@jcolladosp](https://twitter.com/jcolladosp "jcolladosp on twitter")
-* other communication/social media
+
+#### Numcode Website
+* Homepage: http://www.numcode.com/nouveau/
+* e-mail: jousselin.new.antique@gmail.com
+
