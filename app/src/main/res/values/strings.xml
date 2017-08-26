@@ -17,4 +17,7 @@
     <string name="french">French</string>
     <string name="language">Language</string>
     <string name="save">Save</string>
+
+    <string name="loading">Loading…</string>
+
 </resources>

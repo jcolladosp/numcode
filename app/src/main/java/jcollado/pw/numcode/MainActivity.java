@@ -1,5 +1,6 @@
 package jcollado.pw.numcode;
 
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -7,6 +8,7 @@ import android.content.res.Configuration;
 import android.content.res.Resources;
 
 import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -18,9 +20,11 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.Toast;
 
 import com.afollestad.materialdialogs.DialogAction;
 import com.afollestad.materialdialogs.MaterialDialog;
+import com.pddstudio.urlshortener.URLShortener;
 import com.thefinestartist.finestwebview.FinestWebView;
 
 import java.util.Locale;
@@ -36,13 +40,14 @@ import mehdi.sakout.fancybuttons.FancyButton;
 public class MainActivity extends AppCompatActivity {
     SharedPreferences sharedPref;
 
-    String url = "http://www.numcode.com/fr/";
     @BindView(R.id.buttonShare)
     FancyButton buttonShare;
     @BindView(R.id.buttonProfile)
     FancyButton buttonProfile;
     @BindView(R.id.buttonWeb)
     FancyButton buttonWeb;
+    String url;
+    protected ProgressDialog progressBar;
 
     boolean noExists = true;
 
@@ -56,7 +61,9 @@ public class MainActivity extends AppCompatActivity {
         buttonShare.setCustomTextFont("WorkSans-Medium.otf");
         buttonProfile.setCustomTextFont("WorkSans-Medium.otf");
         buttonWeb.setCustomTextFont("WorkSans-Medium.otf");
-
+        url =  "http://www.numcode.com/" + getLocale();
+        progressBar = new ProgressDialog(this);
+        progressBar.setIndeterminate(true);
     }
 
     @OnClick(R.id.settingsButton)
@@ -106,18 +113,14 @@ public class MainActivity extends AppCompatActivity {
 
         String locale = getResources().getConfiguration().locale.toString();
 
-        switch (locale) {
-            case "es":
-                spanish.setChecked(true);
-                break;
-            case "fr":
-                french.setChecked(true);
-                break;
 
-            default:
+            if(locale.contains("es"))  spanish.setChecked(true);
+            else if(locale.contains("fr"))  french.setChecked(true);
+            else {
                 english.setChecked(true);
-                break;
-        }
+            }
+
+
 
     }
     public void setLocale(String lang) {
@@ -144,7 +147,7 @@ public class MainActivity extends AppCompatActivity {
 
         }
         else{
-            String url = "http://www.numcode.com/fr/recherche?controller=search&orderby=position&orderway=desc&search_query="+numcode+"&submit_search=";
+            String url = "http://www.numcode.com/"+ getLocale() + "/recherche?controller=search&orderby=position&orderway=desc&search_query="+numcode+"&submit_search=";
             new FinestWebView.Builder(this).titleDefault(getString(R.string.numcode_profile)).titleColor(ContextCompat.getColor(this, R.color.accent)).updateTitleFromHtml(false).show(url);
 
         }
@@ -159,11 +162,8 @@ public class MainActivity extends AppCompatActivity {
 
         }
         else{
-            String url = "http://www.numcode.com/fr/recherche?controller=search&orderby=position&orderway=desc&search_query="+numcode+"&submit_search=";
-            Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
-            sharingIntent.setType("text/plain");
-            sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, getString(R.string.share_body)+url);
-            startActivity(Intent.createChooser(sharingIntent, getResources().getString(R.string.share_using)));
+            String url = "http://www.numcode.com/"+ getLocale() + "/recherche?controller=search&orderby=position&orderway=desc&search_query="+numcode+"&submit_search=";
+            shortUrl(url);
 
         }
 
@@ -207,6 +207,46 @@ public class MainActivity extends AppCompatActivity {
                 .show();
     }
 
+    public String getLocale(){
+        String locale = getResources().getConfiguration().locale.toString();
+
+        if(locale.contains("es")) return "es";
+        else if(locale.contains("fr"))  return "fr";
+        return "gb";
+    }
+
+    public void shortUrl(String url) {
 
 
+        URLShortener.shortUrl(url, new URLShortener.LoadingCallback() {
+            @Override
+            public void startedLoading() {
+               onPreStartConnection();
+            }
+
+            @Override
+            public void finishedLoading(@Nullable String shortUrl) {
+                //make sure the string is not null
+                if(shortUrl != null) {
+                    progressBar.hide();
+                    share(shortUrl);
+                }
+                else Toast.makeText(MainActivity.this, "Unable to generate Link!", Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
+
+public void share(String url){
+    Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
+    sharingIntent.setType("text/plain");
+    sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, getString(R.string.share_body)+" "+url);
+    startActivity(Intent.createChooser(sharingIntent, getResources().getString(R.string.share_using)));
+}
+
+
+    public void onPreStartConnection() {
+        progressBar.setMessage(getString(R.string.loading));
+        progressBar.setCancelable(false);
+        progressBar.show();
+    }
 }

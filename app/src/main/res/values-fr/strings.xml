@@ -16,5 +16,7 @@
     <string name="french">Francais</string>
     <string name="language">Langue</string>
     <string name="save">Garder</string>
+    <string name="loading">Chargement…</string>
+
 </resources>
 
