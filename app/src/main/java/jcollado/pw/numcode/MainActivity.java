@@ -5,7 +5,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.content.res.Resources;
-import android.graphics.Color;
+
 import android.support.annotation.NonNull;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
@@ -13,7 +13,7 @@ import android.os.Bundle;
 
 import android.text.InputType;
 import android.util.DisplayMetrics;
-import android.util.Log;
+
 import android.view.View;
 import android.widget.EditText;
 import android.widget.RadioButton;
@@ -23,8 +23,6 @@ import com.afollestad.materialdialogs.DialogAction;
 import com.afollestad.materialdialogs.MaterialDialog;
 import com.thefinestartist.finestwebview.FinestWebView;
 
-import java.io.IOException;
-import java.util.ArrayList;
 import java.util.Locale;
 
 import butterknife.BindView;
@@ -32,15 +30,13 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 import jcollado.pw.numcode.Utils.Functions;
 import mehdi.sakout.fancybuttons.FancyButton;
-import okhttp3.Callback;
-import okhttp3.OkHttpClient;
-import okhttp3.Request;
-import okhttp3.Response;
+
 
 
 public class MainActivity extends AppCompatActivity {
     SharedPreferences sharedPref;
-    String url = "http://www.numcode.com/nouveau/";
+
+    String url = "http://www.numcode.com /fr/";
     @BindView(R.id.buttonShare)
     FancyButton buttonShare;
     @BindView(R.id.buttonProfile)
@@ -54,6 +50,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         ButterKnife.bind(this);
          sharedPref =getPreferences(Context.MODE_PRIVATE);
         buttonShare.setCustomTextFont("WorkSans-Medium.otf");
@@ -147,7 +144,7 @@ public class MainActivity extends AppCompatActivity {
 
         }
         else{
-            String url = "http://www.numcode.com/nouveau/fr/profile-"+numcode+".html";
+            String url = "http://www.numcode.com /fr/recherche?controller=search&orderby=position&orderway=desc&search_query="+numcode+"&submit_search=";
             new FinestWebView.Builder(this).titleDefault(getString(R.string.numcode_profile)).titleColor(ContextCompat.getColor(this, R.color.accent)).updateTitleFromHtml(false).show(url);
 
         }
@@ -162,7 +159,7 @@ public class MainActivity extends AppCompatActivity {
 
         }
         else{
-            String url = " http://www.numcode.com/nouveau/fr/profile-"+numcode+".html";
+            String url = "http://www.numcode.com /fr/recherche?controller=search&orderby=position&orderway=desc&search_query="+numcode+"&submit_search=";
             Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
             sharingIntent.setType("text/plain");
             sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, getString(R.string.share_body)+url);
