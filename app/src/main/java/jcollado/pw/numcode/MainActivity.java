@@ -40,7 +40,6 @@ import okhttp3.Response;
 
 public class MainActivity extends AppCompatActivity {
     SharedPreferences sharedPref;
-    OkHttpClient client;
     String url = "http://www.numcode.com/nouveau/";
     @BindView(R.id.buttonShare)
     FancyButton buttonShare;
@@ -55,7 +54,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        client = new OkHttpClient();
         ButterKnife.bind(this);
          sharedPref =getPreferences(Context.MODE_PRIVATE);
         buttonShare.setCustomTextFont("WorkSans-Medium.otf");
