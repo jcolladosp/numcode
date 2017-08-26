@@ -36,7 +36,7 @@ import mehdi.sakout.fancybuttons.FancyButton;
 public class MainActivity extends AppCompatActivity {
     SharedPreferences sharedPref;
 
-    String url = "http://www.numcode.com /fr/";
+    String url = "http://www.numcode.com/fr/";
     @BindView(R.id.buttonShare)
     FancyButton buttonShare;
     @BindView(R.id.buttonProfile)
@@ -144,7 +144,7 @@ public class MainActivity extends AppCompatActivity {
 
         }
         else{
-            String url = "http://www.numcode.com /fr/recherche?controller=search&orderby=position&orderway=desc&search_query="+numcode+"&submit_search=";
+            String url = "http://www.numcode.com/fr/recherche?controller=search&orderby=position&orderway=desc&search_query="+numcode+"&submit_search=";
             new FinestWebView.Builder(this).titleDefault(getString(R.string.numcode_profile)).titleColor(ContextCompat.getColor(this, R.color.accent)).updateTitleFromHtml(false).show(url);
 
         }
@@ -159,7 +159,7 @@ public class MainActivity extends AppCompatActivity {
 
         }
         else{
-            String url = "http://www.numcode.com /fr/recherche?controller=search&orderby=position&orderway=desc&search_query="+numcode+"&submit_search=";
+            String url = "http://www.numcode.com/fr/recherche?controller=search&orderby=position&orderway=desc&search_query="+numcode+"&submit_search=";
             Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
             sharingIntent.setType("text/plain");
             sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, getString(R.string.share_body)+url);
