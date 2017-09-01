@@ -19,5 +19,6 @@
     <string name="save">Save</string>
 
     <string name="loading">Loading…</string>
+    <string name="download">Download Numcode: </string>
 
 </resources>

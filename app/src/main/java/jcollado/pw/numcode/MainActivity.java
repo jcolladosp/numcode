@@ -239,7 +239,8 @@ public class MainActivity extends AppCompatActivity {
 public void share(String url){
     Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
     sharingIntent.setType("text/plain");
-    sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, getString(R.string.share_body)+" "+url);
+    sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, getString(R.string.share_body)+" "+url +
+    "\n" + "\n" +getString(R.string.download) + " bit.ly/numcode");
     startActivity(Intent.createChooser(sharingIntent, getResources().getString(R.string.share_using)));
 }
 
