@@ -44,6 +44,6 @@ Numcode
 * Twitter: [@jcolladosp](https://twitter.com/jcolladosp "jcolladosp on twitter")
 
 #### Numcode Website
-* Homepage: http://www.numcode.com/nouveau/
+* Homepage: http://www.numcode.com/
 * e-mail: jousselin.new.antique@gmail.com
 
