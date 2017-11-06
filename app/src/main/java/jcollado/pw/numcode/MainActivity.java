@@ -46,6 +46,8 @@ public class MainActivity extends AppCompatActivity {
     FancyButton buttonProfile;
     @BindView(R.id.buttonWeb)
     FancyButton buttonWeb;
+    @BindView(R.id.buttonContactList)
+    FancyButton buttonContactList;
     String url;
     protected ProgressDialog progressBar;
 
@@ -61,6 +63,8 @@ public class MainActivity extends AppCompatActivity {
         buttonShare.setCustomTextFont("WorkSans-Medium.otf");
         buttonProfile.setCustomTextFont("WorkSans-Medium.otf");
         buttonWeb.setCustomTextFont("WorkSans-Medium.otf");
+        buttonContactList.setCustomTextFont("WorkSans-Medium.otf");
+
         url =  "http://www.numcode.com/" + getLocale();
         progressBar = new ProgressDialog(this);
         progressBar.setIndeterminate(true);
@@ -139,6 +143,12 @@ public class MainActivity extends AppCompatActivity {
 
         new FinestWebView.Builder(this).titleDefault(getString(R.string.numcode_button)).titleColor(ContextCompat.getColor(this, R.color.accent)).updateTitleFromHtml(false).show(url);
     }
+    @OnClick(R.id.buttonContactList)
+    public void onContactList(){
+        String contactListURL = "http://www.numcode.com/fr/index.php?controller=contact_list";
+        new FinestWebView.Builder(this).titleDefault(getString(R.string.contact_list_button)).titleColor(ContextCompat.getColor(this, R.color.accent)).updateTitleFromHtml(false).show(contactListURL);
+    }
+
     @OnClick(R.id.buttonProfile)
     public void onProfile(){
         String numcode= Functions.getNumCodePrefs(sharedPref);
@@ -240,7 +250,7 @@ public void share(String url){
     Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
     sharingIntent.setType("text/plain");
     sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, getString(R.string.share_body)+" "+url +
-    "\n" + "\n" +getString(R.string.download) + " bit.ly/numcode");
+    "\n" + "\n" +getString(R.string.download) + " numcode.com/app");
     startActivity(Intent.createChooser(sharingIntent, getResources().getString(R.string.share_using)));
 }
 

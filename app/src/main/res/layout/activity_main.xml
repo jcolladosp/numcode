@@ -34,102 +34,138 @@
          android:layout_height="36dp" />
  </RelativeLayout>
 
- <RelativeLayout
-     android:layout_height="0dip"
-     android:layout_width="match_parent"
-     android:layout_weight="0.58"
-     android:layout_below="@+id/logoLayput"
-     android:background="@color/background2"
-     android:id="@+id/buttonLayout">
+    <RelativeLayout
+        android:id="@+id/buttonLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_below="@+id/logoLayput"
+        android:layout_weight="0.58"
+        android:background="@color/background2"
+        android:gravity="center_vertical|center_horizontal">
 
-     <RelativeLayout
-         android:layout_width="match_parent"
-         android:layout_height="wrap_content"
-         android:layout_centerVertical="true"
-         android:layout_alignParentLeft="true"
-         android:layout_alignParentStart="true">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true">
 
-         <mehdi.sakout.fancybuttons.FancyButton
-             android:id="@+id/buttonWeb"
-             android:layout_width="match_parent"
-             android:layout_height="wrap_content"
-             android:paddingBottom="15dp"
-             android:paddingLeft="20dp"
-             android:paddingRight="20dp"
-             android:paddingTop="15dp"
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="20dp"
+                android:gravity="center_vertical">
 
-             fancy:fb_borderColor="@color/green_button"
-             fancy:fb_borderWidth="1dp"
-             fancy:fb_defaultColor="@color/background2"
-             fancy:fb_focusColor="@color/background2"
-             fancy:fb_radius="30dp"
-             fancy:fb_text="@string/numcode_button"
-             fancy:fb_textColor="@color/green_button"
-             android:layout_alignParentTop="false"
-             android:layout_centerHorizontal="true"
-             android:layout_marginLeft="110dp">
+                <mehdi.sakout.fancybuttons.FancyButton
+                    android:id="@+id/buttonWeb"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="false"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="110dp"
+                    android:layout_marginTop="0dp"
 
-         </mehdi.sakout.fancybuttons.FancyButton>
+                    android:paddingBottom="15dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingTop="15dp"
+                    fancy:fb_borderColor="@color/green_button"
+                    fancy:fb_borderWidth="1dp"
+                    fancy:fb_defaultColor="@color/background2"
+                    fancy:fb_focusColor="@color/background2"
+                    fancy:fb_radius="30dp"
+                    fancy:fb_text="@string/numcode_button"
+                    fancy:fb_textColor="@color/green_button">
 
-         <mehdi.sakout.fancybuttons.FancyButton
-             android:id="@+id/buttonProfile"
-             android:layout_width="match_parent"
-             android:layout_height="wrap_content"
-             android:paddingBottom="15dp"
-             android:paddingLeft="20dp"
+                </mehdi.sakout.fancybuttons.FancyButton>
+
+                <mehdi.sakout.fancybuttons.FancyButton
+                    android:id="@+id/buttonProfile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/buttonWeb"
+                    android:layout_centerHorizontal="true"
 
 
-             android:paddingRight="20dp"
-             android:paddingTop="15dp"
-             fancy:fb_borderColor="@color/green_button"
-             fancy:fb_borderWidth="1dp"
-             fancy:fb_defaultColor="@color/green_button"
-             fancy:fb_focusColor="@color/green_button"
+                    android:layout_marginLeft="110dp"
+                    android:layout_marginTop="20dp"
+                    android:paddingBottom="15dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingTop="15dp"
 
-             fancy:fb_radius="30dp"
-             fancy:fb_text="@string/numcode_profile"
-             fancy:fb_textColor="@color/background2"
-             android:layout_below="@+id/buttonWeb"
-             android:layout_centerHorizontal="true"
-             android:layout_marginTop="36dp"
-             android:layout_marginLeft="110dp" />
+                    fancy:fb_borderColor="@color/green_button"
+                    fancy:fb_borderWidth="1dp"
+                    fancy:fb_defaultColor="@color/green_button"
+                    fancy:fb_focusColor="@color/green_button"
+                    fancy:fb_radius="30dp"
+                    fancy:fb_text="@string/numcode_profile"
+                    fancy:fb_textColor="@color/background2" />
 
-         <mehdi.sakout.fancybuttons.FancyButton
-             android:id="@+id/buttonShare"
-             android:layout_width="match_parent"
-             android:layout_height="wrap_content"
-             android:paddingBottom="15dp"
-             android:paddingLeft="20dp"
+                <mehdi.sakout.fancybuttons.FancyButton
+                    android:id="@+id/buttonShare"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/buttonProfile"
+                    android:layout_centerHorizontal="true"
 
-             fancy:fb_iconPosition="left"
+                    android:layout_marginLeft="110dp"
 
-             android:paddingRight="20dp"
-             android:paddingTop="15dp"
-             fancy:fb_borderColor="@color/green_button"
-             fancy:fb_borderWidth="1dp"
-             fancy:fb_defaultColor="@color/green_button"
-             fancy:fb_focusColor="@color/green_button"
+                    android:layout_marginTop="20dp"
+                    android:paddingBottom="15dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingTop="15dp"
+                    fancy:fb_borderColor="@color/green_button"
 
-             fancy:fb_radius="30dp"
-             fancy:fb_text="@string/numcode_share"
-             fancy:fb_textColor="@color/background2"
-             android:layout_below="@+id/buttonProfile"
-             android:layout_marginTop="36dp"
-             android:layout_centerHorizontal="true"
-             android:layout_marginLeft="110dp" />
-     </RelativeLayout>
+                    fancy:fb_borderWidth="1dp"
+                    fancy:fb_defaultColor="@color/green_button"
+                    fancy:fb_focusColor="@color/green_button"
+                    fancy:fb_iconPosition="left"
+                    fancy:fb_radius="30dp"
+                    fancy:fb_text="@string/numcode_share"
+                    fancy:fb_textColor="@color/background2" />
 
-     <ImageView
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
-         fancy:srcCompat="@drawable/ic_settings"
-         android:layout_alignParentBottom="true"
-         android:layout_alignParentRight="true"
-         android:layout_alignParentEnd="true"
-         android:id="@+id/settingsButton"
-         android:layout_marginRight="5dp"
-         android:layout_marginBottom="5dp" />
+                <mehdi.sakout.fancybuttons.FancyButton
+                    android:id="@+id/buttonContactList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/buttonShare"
+                    android:layout_centerHorizontal="true"
 
- </RelativeLayout>
+                    android:layout_marginLeft="110dp"
+
+                    android:layout_marginTop="20dp"
+                    android:paddingBottom="15dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingTop="15dp"
+                    fancy:fb_borderColor="@color/green_button"
+
+                    fancy:fb_borderWidth="1dp"
+                    fancy:fb_defaultColor="@color/green_button"
+                    fancy:fb_focusColor="@color/green_button"
+                    fancy:fb_iconPosition="left"
+                    fancy:fb_radius="30dp"
+                    fancy:fb_text="@string/contact_list_button"
+                    fancy:fb_textColor="@color/background2" />
+            </RelativeLayout>
+        </ScrollView>
+
+        <ImageView
+            android:id="@+id/settingsButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="5dp"
+            fancy:srcCompat="@drawable/ic_settings" />
+
+    </RelativeLayout>
 
  </LinearLayout>

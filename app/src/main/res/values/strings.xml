@@ -20,5 +20,6 @@
 
     <string name="loading">Loading…</string>
     <string name="download">Download Numcode: </string>
+    <string name="contact_list_button">CONTACT LIST</string>
 
 </resources>

@@ -18,4 +18,5 @@
     <string name="save">Guardar</string>
     <string name="loading">Cargando…</string>
     <string name="download">Descargar Numcode: </string>
+    <string name="contact_list_button">LISTA DE CONTACTOS</string>
 </resources>
